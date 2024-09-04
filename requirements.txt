@@ -1,0 +1,14 @@
+asgiref
+certifi
+distlib
+Django
+django-environ
+django-cors-headers
+djangorestframework
+filelock
+pipenv
+platformdirs
+setuptools
+sqlparse
+tzdata
+virtualenv
