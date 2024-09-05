@@ -1,11 +1,13 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
 
 class Note(models.Model):
-    body = models.TextField(null=True, blank=True)
-    updated = models.DateTimeField(auto_now=True)
+    title = models.CharField(max_length=100, default="Default Title")
+    content = models.TextField(default="Default Content")
     created = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="notes", default=1)
+
 
     def __str__(self):
-        return self.body[0:50]
+        return self.title
