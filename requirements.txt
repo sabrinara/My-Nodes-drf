@@ -8,3 +8,13 @@ pytz
 sqlparse
 psycopg2-binary
 python-dotenv
+certifi
+distlib
+django-environ
+filelock
+pipenv
+platformdirs
+setuptools
+sqlparse
+tzdata
+virtualenv
