@@ -29,6 +29,10 @@ const routers = createBrowserRouter([
                 path: "/",
                 element: <Home />
             },
+            // {
+            //     path: "/note",
+            //     element: <Note />
+            // },
             {
                 path: "/note",
                 element: <ProtectedRoute><NotesListPage /></ProtectedRoute>

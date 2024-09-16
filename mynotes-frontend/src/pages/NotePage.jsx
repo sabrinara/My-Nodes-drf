@@ -79,8 +79,6 @@ const NotePage = () => {
         setIsUpdating(true);
     };
 
-
-
     const getCreatedDate = (note) => {
         return new Date(note.created).toLocaleDateString();
 
@@ -91,21 +89,29 @@ const NotePage = () => {
     }
     return (
         <div className="md:m-20 h-screen">
-            <div className="ml-6 flex items-center gap-2">
+            <div className="ml-6 flex items-center gap-2 mt-10 md:mt-0">
                 <GiNotebook className="text-5xl text-cyan-500" />
                 <h1 className="text-4xl text-purple-500 font-bold">Note </h1>
             </div>
             <div className="border-2 border-cyan-500 p-6 md:p-8 m-6 md:mb-44">
 
 
-                <div className="flex items-center gap-2 my-2" onClick={handleSubmit} >
+                <div className="flex items-center justify-between gap-2 my-2" onClick={handleSubmit} >
+                    <div className="flex items-center gap-2">
                     <BiArrowToLeft className="text-3xl text-purple-500" ></BiArrowToLeft>
                     <h1 className="text-2xl text-cyan-500 font-bold">Details </h1>
-                </div>
-                <div className="flex items-center justify-between">
+                    </div>
+                    {
+                  id !== 'new' && (
+                    <div className="flex items-center justify-between gap-16">
                     <h1 ><span className="text-lg  font-medium text-cyan-500">Created: </span>{getCreatedDate(note)} </h1>
-                    <h1 ><span className="text-lg  font-medium text-purple-500">Last Update: </span>{getDate(note)}</h1>
+                    {/* <h1 ><span className="text-lg  font-medium text-purple-500">Last Update: </span>{getDate(note)}</h1> */}
                 </div>
+
+                  )
+              }
+                </div>
+             
                 <hr className="my-4 border-1 border-cyan-500" />
                 <p><span className="text-cyan-600"></span>{note?.title}</p>
                 <div>
@@ -143,7 +149,7 @@ const NotePage = () => {
                                         type="text"
                                         name="title"
                                         placeholder="Enter new title"
-                                        className="w-full border-2 border-purple-500 rounded"
+                                        className="w-full border-2 border-purple-500 rounded mb-4 py-2"
                                         onChange={handleChange}
                                         value={note?.title}
                                     />
@@ -168,22 +174,22 @@ const NotePage = () => {
                                     <h1 className="text-sm text-white bg-cyan-500 rounded px-2 py-1 font-semibold " >Submit Note</h1>
                                 </button>
                             </div>
-                            <input 
-    type="text" 
-    name="title" 
-    placeholder="Enter new title" 
-    className="w-full border-2 border-purple-500 rounded" 
-    onChange={handleChange} 
-    value={note?.title} 
-/>
+                            <input
+                                type="text"
+                                name="title"
+                                placeholder="Enter new title"
+                                className="w-full border-2 border-purple-500 rounded mb-4 py-2"
+                                onChange={handleChange}
+                                value={note?.title}
+                            />
 
-<textarea
-    name="content"
-    onChange={handleChange}
-    value={note?.content}
-    className="w-full h-40 border-2 border-purple-500 rounded"
-    placeholder="Write your thought here...."
-/>
+                            <textarea
+                                name="content"
+                                onChange={handleChange}
+                                value={note?.content}
+                                className="w-full h-40 border-2 border-purple-500 rounded"
+                                placeholder="Write your thought here...."
+                            />
 
                         </>
                     )}

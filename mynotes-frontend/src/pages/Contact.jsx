@@ -3,7 +3,7 @@
 const Contact = () => {
 
     return (
-        <div>
+        <div className="h-screen">
 
             <div>
                 Contact
