@@ -118,11 +118,11 @@ const NavBar = ({ toggleTheme }) => {
                                 className="sm:hidden p-2 text-cyan-500"
                                 onClick={toggleMenu}
                             >
-                                ☰ {/* You can replace this with an icon */}
+                                ☰
                             </button>
 
                             {/* Navigation Links */}
-                            <div className={`flex flex-col sm:flex-row items-center gap-4 ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
+                            <div className={`flex flex-col sm:flex-row items-center bg-white p-4 gap-4  ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
                                 {navlinks.map((link) => (
                                     <NavLink
                                         key={link.name}
