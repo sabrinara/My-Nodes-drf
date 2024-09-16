@@ -15,7 +15,7 @@ const Root = () => {
     return (
         <div className="max-w-8xl mx-auto font-roboto" data-theme={isDarkTheme ? "dark" : "light"}>
             <NavBar toggleTheme={toggleTheme}></NavBar>
-            <Outlet className="min-h-screen" />
+            <Outlet className="min-h-screen " />
             <Footer />
         </div>
     );
