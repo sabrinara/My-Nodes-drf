@@ -10,7 +10,7 @@ const Other = () => {
             </div>
 
        
-            <div className="w-full md:w-2/3  px-20 py-20 mb-10">
+            <div className="w-full md:w-2/3  px-20 py-20 ">
                 <h1 className="md:ml-8 mb-6 text-2xl md:text-5xl font-bold text-start text-cyan-500 my-2">Welcome to <span className="text-purple-500">NotHi</span></h1>
                 <ul className="list-disc ml-10 ">
                     <li className="text-lg font-bold  text-start my-2 text-cyan-500">Efficient Note Management</li>
