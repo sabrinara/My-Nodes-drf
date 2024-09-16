@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <footer className="mt-20">
+        <div className="mt-20 ">
             <div className="relative ">
             <div className="text-light text-center text-white font-bold relative z-10 bottom-2 md:bottom-12">
                 <div className="flex flex-col justify-center items-center h-full bg-gradient-to-b from-transparent to-a2d9ff">
@@ -23,7 +23,7 @@ const Footer = () => {
             </svg>
             </div>
            
-        </footer>
+        </div>
     );
 };
 

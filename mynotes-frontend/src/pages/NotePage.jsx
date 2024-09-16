@@ -90,7 +90,7 @@ const NotePage = () => {
 
     }
     return (
-        <div className="md:m-20">
+        <div className="md:m-20 h-screen">
             <div className="ml-6 flex items-center gap-2">
                 <GiNotebook className="text-5xl text-cyan-500" />
                 <h1 className="text-4xl text-purple-500 font-bold">Note </h1>

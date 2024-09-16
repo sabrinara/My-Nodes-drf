@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-
+import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const NavBar = ({ toggleTheme }) => {
+    const navigate = useNavigate();
 
     const handleLogout = () => {
         localStorage.removeItem("access");
         window.location.reload();
+        toast.success("Logout Successful");
+        navigate("/login");
     };
     const navlinks = [
         {
@@ -60,7 +63,7 @@ const NavBar = ({ toggleTheme }) => {
         <div>
             <div className="sticky top-0 z-10 hidden md:flex items-center justify-between px-4 py-4 ">
                 <div className="flex items-center md:gap-2 md:px-6">
-                    <img src="/public/logo.png" className="w-6 h-6 md:w-8 md:h-10 " alt="" />
+                    <img src="./logo.png" className="w-6 h-6 md:w-8 md:h-10 " alt="" />
                     <h1 className="text-purple-500 text-lg md:text-3xl font-bold font-serif">Not<span className="text-cyan-500">Hi</span></h1>
                 </div>
                 <div className="flex items-center gap-4">

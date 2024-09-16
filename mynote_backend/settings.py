@@ -70,8 +70,6 @@ MIDDLEWARE = [
 
 ]
 
-
-
 ROOT_URLCONF = 'mynote_backend.urls'
 
 TEMPLATES = [

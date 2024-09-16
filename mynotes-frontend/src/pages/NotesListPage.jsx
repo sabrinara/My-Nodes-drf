@@ -26,7 +26,7 @@ const NotesListPage = () => {
     const length = notes.length;
 
     return (
-        <div className="md:pb-20 md:m-20 ">
+        <div className="md:pb-20 md:m-20">
             <div className="flex items-center justify-between">
                 <div className="ml-6 flex items-center  gap-2">
                     <GiNotebook className="text-2xl md:text-5xl text-cyan-500" />

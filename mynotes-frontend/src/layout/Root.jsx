@@ -13,10 +13,10 @@ const Root = () => {
     
 
     return (
-        <div className="max-w-8xl mx-auto font-roboto " data-theme={isDarkTheme ? "dark" : "light"}>
+        <div className="max-w-8xl mx-auto font-roboto" data-theme={isDarkTheme ? "dark" : "light"}>
             <NavBar toggleTheme={toggleTheme}></NavBar>
-            <Outlet />
-            <Footer />
+            <Outlet className="min-h-screen" />
+            {/* <Footer /> */}
         </div>
     );
 };
